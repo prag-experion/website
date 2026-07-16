@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Name</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+  header p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-top: 0;
+  }
+  .badges {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .badges img { height: 20px; }
+  section {
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  pre {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+  }
+  code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    background: var(--card);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  pre code {
+    background: none;
+    padding: 0;
+  }
+  .tree {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    white-space: pre;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .card h3 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+  }
+  .card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 64px;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Project Name</h1>
+    <p>A short, one- or two-sentence description of what this project does and who it's for.</p>
+    <div class="badges">
+      <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+      <img src="https://img.shields.io/badge/version-1.0.0-informational.svg" alt="Version">
+      <img src="https://img.shields.io/badge/status-active-success.svg" alt="Status">
+    </div>
+  </header>
+
+  <section>
+    <h2>🚀 Features</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Feature One</h3>
+        <p>Short description of what this feature does.</p>
+      </div>
+      <div class="card">
+        <h3>Feature Two</h3>
+        <p>Short description of what this feature does.</p>
+      </div>
+      <div class="card">
+        <h3>Feature Three</h3>
+        <p>Short description of what this feature does.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📦 Installation</h2>
+    <pre><code>git clone https://github.com/username/repo-name.git
+cd repo-name
+npm install</code></pre>
+  </section>
+
+  <section>
+    <h2>🛠️ Usage</h2>
+    <pre><code>npm start</code></pre>
+    <p>Add a short example of how to use the project here — a code snippet, screenshot, or sample command.</p>
+  </section>
+
+  <section>
+    <h2>📁 Project Structure</h2>
+    <div class="tree">repo-name/
+├── src/            # Source code
+├── docs/           # Documentation
+├── tests/          # Test files
+└── index.html      # You are here</div>
+  </section>
+
+  <section>
+    <h2>🤝 Contributing</h2>
+    <ul>
+      <li>Fork the repository</li>
+      <li>Create your feature branch (<code>git checkout -b feature/amazing-feature</code>)</li>
+      <li>Commit your changes (<code>git commit -m 'Add some amazing feature'</code>)</li>
+      <li>Push to the branch (<code>git push origin feature/amazing-feature</code>)</li>
+      <li>Open a Pull Request</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📄 License</h2>
+    <p>This project is licensed under the <a href="LICENSE">MIT License</a> — see the LICENSE file for details.</p>
+  </section>
+
+  <footer>
+    <p>Project Link: <a href="https://github.com/username/repo-name">github.com/username/repo-name</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
