@@ -3,196 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Name</title>
+<title>Prageesh S. — Data & Analytics</title>
 <style>
   :root {
-    --bg: #0d1117;
-    --card: #161b22;
-    --border: #30363d;
-    --text: #c9d1d9;
-    --muted: #8b949e;
-    --accent: #58a6ff;
+    --bg: #FAFAF7;
+    --ink: #1E2328;
+    --muted: #5B6470;
+    --line: #E3E0D8;
+    --teal: #2E6F6B;
+    --mustard: #C08A2E;
+    --card: #FFFFFF;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     background: var(--bg);
-    color: var(--text);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     line-height: 1.6;
   }
-  .container {
-    max-width: 800px;
+  .wrap {
+    max-width: 720px;
     margin: 0 auto;
-    padding: 48px 24px 96px;
+    padding: 64px 24px 96px;
   }
-  header {
-    text-align: center;
-    margin-bottom: 48px;
+
+  /* hero */
+  .hero { margin-bottom: 56px; }
+  .hero .tag {
+    font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 0.8rem;
+    color: var(--teal);
+    letter-spacing: 0.02em;
   }
-  header h1 {
-    font-size: 2.2rem;
+  .hero h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.6rem;
+    margin: 6px 0 12px;
+    font-weight: 600;
+  }
+  .hero p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 58ch;
+    margin: 0 0 4px;
+  }
+  .status {
+    margin-top: 20px;
+    font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 0.85rem;
+    color: var(--teal);
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 10px 14px;
+    display: inline-block;
+  }
+  .status::before {
+    content: "> ";
+    color: var(--mustard);
+  }
+
+  section { margin-bottom: 52px; }
+  h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+  }
+
+  /* skills */
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag-chip {
+    font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 0.8rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--ink);
+  }
+  .skills-group { margin-bottom: 14px; }
+  .skills-group .label {
+    font-size: 0.8rem;
+    color: var(--muted);
     margin-bottom: 8px;
   }
-  header p {
-    color: var(--muted);
-    font-size: 1.1rem;
-    margin-top: 0;
+
+  /* experience */
+  .job {
+    margin-bottom: 32px;
+    padding-left: 18px;
+    border-left: 2px solid var(--line);
   }
-  .badges {
+  .job-head {
     display: flex;
-    justify-content: center;
-    gap: 8px;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 16px;
-  }
-  .badges img { height: 20px; }
-  section {
-    margin-bottom: 40px;
-  }
-  h2 {
-    font-size: 1.4rem;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 8px;
-    margin-bottom: 16px;
-  }
-  ul {
-    padding-left: 20px;
-  }
-  li {
+    gap: 8px;
     margin-bottom: 6px;
   }
-  pre {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 16px;
-    overflow-x: auto;
-    font-size: 0.9rem;
+  .job-title { font-weight: 600; font-size: 1.05rem; }
+  .job-meta { color: var(--muted); font-size: 0.85rem; }
+  .job ul { margin: 10px 0 0; padding-left: 18px; }
+  .job li { margin-bottom: 6px; color: var(--ink); }
+
+  /* certs */
+  .cert {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
   }
-  code {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-    background: var(--card);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.9em;
-  }
-  pre code {
-    background: none;
-    padding: 0;
-  }
-  .tree {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 16px;
-    font-family: monospace;
-    font-size: 0.9rem;
-    white-space: pre;
-  }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 16px;
-  }
-  .card h3 {
-    margin: 0 0 8px;
-    font-size: 1rem;
-  }
-  .card p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.9rem;
-  }
+  .cert::before { content: "✓"; color: var(--teal); font-weight: 700; }
+
   footer {
-    text-align: center;
-    color: var(--muted);
-    font-size: 0.85rem;
     margin-top: 64px;
-    border-top: 1px solid var(--border);
     padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  footer a { color: var(--teal); text-decoration: none; font-weight: 600; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 2rem; }
   }
 </style>
 </head>
 <body>
-<div class="container">
+<div class="wrap">
 
-  <header>
-    <h1>Project Name</h1>
-    <p>A short, one- or two-sentence description of what this project does and who it's for.</p>
-    <div class="badges">
-      <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
-      <img src="https://img.shields.io/badge/version-1.0.0-informational.svg" alt="Version">
-      <img src="https://img.shields.io/badge/status-active-success.svg" alt="Status">
-    </div>
-  </header>
+  <div class="hero">
+    <div class="tag">Data & Analytics Professional</div>
+    <h1>Prageesh S.</h1>
+    <p>I work with data — mostly warehouse and supply chain stuff. Turning messy ERP and WMS exports into dashboards and reports people actually use, instead of ones that just sit there.</p>
+    <p>4+ years doing this across BI, ETL, and a few ERP systems along the way.</p>
+    <div class="status">currently building things at Experion Technologies, Trivandrum</div>
+  </div>
 
   <section>
-    <h2>🚀 Features</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Feature One</h3>
-        <p>Short description of what this feature does.</p>
-      </div>
-      <div class="card">
-        <h3>Feature Two</h3>
-        <p>Short description of what this feature does.</p>
-      </div>
-      <div class="card">
-        <h3>Feature Three</h3>
-        <p>Short description of what this feature does.</p>
+    <h2>What I work with</h2>
+    <div class="skills-group">
+      <div class="label">BI & Visualization</div>
+      <div class="tags">
+        <span class="tag-chip">Power BI</span>
+        <span class="tag-chip">Paginated Reports</span>
+        <span class="tag-chip">Tableau</span>
       </div>
     </div>
+    <div class="skills-group">
+      <div class="label">Code & Data</div>
+      <div class="tags">
+        <span class="tag-chip">Python</span>
+        <span class="tag-chip">PySpark</span>
+        <span class="tag-chip">SQL Server</span>
+        <span class="tag-chip">T-SQL</span>
+        <span class="tag-chip">dbt</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <div class="label">ETL & Pipelines</div>
+      <div class="tags">
+        <span class="tag-chip">Azure Data Factory</span>
+        <span class="tag-chip">SSIS</span>
+        <span class="tag-chip">Microsoft Fabric</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <div class="label">ERP & WMS</div>
+      <div class="tags">
+        <span class="tag-chip">SAP Business ByDesign</span>
+        <span class="tag-chip">Sage 300</span>
+        <span class="tag-chip">Koerber Highjump</span>
+      </div>
+    </div>
   </section>
 
   <section>
-    <h2>📦 Installation</h2>
-    <pre><code>git clone https://github.com/username/repo-name.git
-cd repo-name
-npm install</code></pre>
+    <h2>Where I've worked</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Data & AI Specialist — Experion Technologies</div>
+        <div class="job-meta">Mar 2022 – Now</div>
+      </div>
+      <ul>
+        <li>Work with global clients on warehouse and logistics data, looking for ways to make supply chains run a bit smoother.</li>
+        <li>Clean and transform data through ETL pipelines before it hits any dashboard or report.</li>
+        <li>Dig into Koerber Highjump WMS to spot where things are slowing down and suggest fixes.</li>
+        <li>Pull data from Sage 300 (orders, shipping, inventory) to help teams make better calls on stock and fulfillment.</li>
+        <li>Build Power BI paginated reports tracking things like warehouse throughput, order accuracy, and shipment delays.</li>
+        <li>Work closely with ops, IT, and logistics teams — helped keep critical systems running at 99.9% uptime.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Business Analyst — Galfar Engineering & Contracting</div>
+        <div class="job-meta">Jan 2020 – Oct 2021 · Abu Dhabi, UAE</div>
+      </div>
+      <ul>
+        <li>Wrote up business requirement docs and mapped out the org structure for management.</li>
+        <li>Worked between SAP users and consultants to turn their questions into actual requirements.</li>
+        <li>Designed process and data flows to match how the business really worked.</li>
+        <li>Helped migrate data from legacy systems into a new SAP setup during a company-wide transformation project.</li>
+        <li>Trained users and fixed issues after the system went live.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Project Administrator — Galfar Engineering & Contracting</div>
+        <div class="job-meta">Jan 2012 – Jan 2020 · Abu Dhabi, UAE</div>
+      </div>
+      <ul>
+        <li>Handled admin and clerical support across departments for 8 years.</li>
+        <li>Prepped and proofread reports, invoices, presentations, and other documents.</li>
+        <li>Took meeting minutes, set up office procedures, and kept filing systems running.</li>
+        <li>Managed supplies and scheduled meetings for managers.</li>
+      </ul>
+    </div>
   </section>
 
   <section>
-    <h2>🛠️ Usage</h2>
-    <pre><code>npm start</code></pre>
-    <p>Add a short example of how to use the project here — a code snippet, screenshot, or sample command.</p>
-  </section>
-
-  <section>
-    <h2>📁 Project Structure</h2>
-    <div class="tree">repo-name/
-├── src/            # Source code
-├── docs/           # Documentation
-├── tests/          # Test files
-└── index.html      # You are here</div>
-  </section>
-
-  <section>
-    <h2>🤝 Contributing</h2>
-    <ul>
-      <li>Fork the repository</li>
-      <li>Create your feature branch (<code>git checkout -b feature/amazing-feature</code>)</li>
-      <li>Commit your changes (<code>git commit -m 'Add some amazing feature'</code>)</li>
-      <li>Push to the branch (<code>git push origin feature/amazing-feature</code>)</li>
-      <li>Open a Pull Request</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>📄 License</h2>
-    <p>This project is licensed under the <a href="LICENSE">MIT License</a> — see the LICENSE file for details.</p>
+    <h2>Certifications</h2>
+    <div class="cert">Microsoft Certified: Power BI Data Analyst Associate</div>
+    <div class="cert">Microsoft Certified: Fabric Analytics Engineer Associate</div>
+    <div class="cert">Microsoft Certified: Fabric Data Engineer Associate</div>
   </section>
 
   <footer>
-    <p>Project Link: <a href="https://github.com/username/repo-name">github.com/username/repo-name</a></p>
+    Want to talk data, dashboards, or anything supply chain? Reach me at
+    <a href="https://www.linkedin.com/in/prageeshsivaprasad/">LinkedIn</a>.
   </footer>
 
 </div>
